@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Research Summary 
+%%%
+%%% Author - Steve Hurder
+%%%
+%%% Date Started: October 12, 2009
+%%% Date Completed: November 15 , 2009
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+\usepackage{graphicx,wrapfig}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{nicefrac}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\parskip = 6pt
+\parindent = 0.0in
+
+\hoffset=-1in
+\voffset=-.7in
+\setlength{\textwidth}{7in}
+\setlength{\textheight}{9in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Flexible formatting options
+%\usepackage[margin=1.25in]{geometry} %% Change margins
+
+\usepackage{xcolor} % Required for inserting images
+\usepackage{amsthm,,amssymb}
+\usepackage{enumerate,enumitem,nicefrac,listings,longtable,caption,makecell}
+% Make references linky
+\usepackage[pdfencoding=auto,psdextra,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+% Insert line numbers
+\usepackage[pagewise]{lineno}\nolinenumbers %no line numbers
+
+%% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+%% Math macros
+\newcommand{\q}[1]{\overline{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\gen}[1]{\langle {#1} \rangle}
+\newcommand{\nrm}{\trianglelefteq}
+\newcommand{\N}{\mathbb{N}} %Bold N, naturals
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Zen}[1]{\mathbf{Z}(#1)} %center
+\newcommand{\Irr}[1]{\mathrm{Irr}(#1)} 
+\newcommand{\Cen}[2]{\mathbf{C}_{#1}(#2)} % centralizer in #1 of #2
+\newcommand{\Norm}[2]{\mathbf{N}_{#1}(#2)} % normalizer in #1 of #2
+\renewcommand{\char}{\, \textrm{char} \,} % characteristic
+\newcommand{\wh}{\widehat}
+
+%% Groups of Lie Type
+\renewcommand{\sl}[2]{\mathrm{SL}_{#1}(#2)} % SL_{#1}(#2)
+\newcommand{\pgl}[2]{\mathrm{PGL}_{#1}(#2)} % PGL_{#1}(#2)
+\newcommand{\psl}[2]{\mathrm{PSL}_{#1}(#2)} % PSL_{#1}(#2)
+\newcommand{\su}[2]{\mathrm{SU}_{#1}(#2)}   % SU_{#1}(#2)
+\newcommand{\psu}[2]{\mathrm{PSU}_{#1}(#2)} % PSU_{#1}(#2)
+\renewcommand{\sp}[2]{\mathrm{Sp}_{#1}(#2)} % Sp_{#1}(#2)
+\newcommand{\psp}[2]{\mathrm{PSp}_{#1}(#2)} % PSp_{#1}(#2)
+
+
+
+\begin{document}
+
+ 
+\title{Finite Groups I: List of Errata}
+
+%\thanks{2000 {\it Mathematics Subject Classification}. Primary 20E34, 20C15; Secondary 81T45, 20E35}
+ 
+%\author{Chris Schroeder}
+%\address{Department of Mathematics and Statistics, Binghamton University,
+%    Binghamton, NY 13902-6000, USA}
+%\email{cschroe2@binghamton.edu}
+\thanks{Last updated: \today}
+
+%\date{\today}
+ 
+
+%\keywords{}
+
+\maketitle
+
+%\vspace{-30pt}
+
+\begin{enumerate}[label=\arabic*.]
+    \item pg.~223, Main Theorem II.8.27, item (7): 
+    
+    The 1979 errata, which are included in the English translation, list the conditions on $t$ as $t \mid (p^m-1)/d$ and $t \mid (p^f-1)$. But this excludes subgroups that do exist. For example, $\mr{PSL}_2(7^4)$ contains subgroups of order $6\cdot 7^3$. (Thank you to I.~Heckenberger for this example.) As the statement is not an ``if and only if'', the 1967 German original is technically correct. In the original, the conditions on $t$ are given as $t \mid (p^m-1)$ and $t \mid (p^f-1)$. Note that this allows subgroups that do not exist. For example, when $m=f$, we know that we can only have $p^f:(p^f-1)/2$.  Or similarly, $\mr{PSL}_2(27)$ would have a subgroup $3:2\cong S_3$, but there is no such subgroup. (Thank you to C.~Parker for this example.) A more precise condition would be $t \mid (p^m-1)$ and $t \mid (p^f-1)/d$, although this still allows too many semidirect products that cannot be realized as subgroups.  Thank you to I.~Heckenberger, G.~Malle, C.~Parker, B.~Sambale, H.~Tong-Viet and R.~Waldecker for addressing this error.
+\end{enumerate}
+
+\end{document}
